@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/**
+/*
 * Generates a random number,
-* then tells you if the number is positve, zero, or negative.
+* then tells you if the number is positive, zero, or negative.
 */int main(void)
 {
 int n;
