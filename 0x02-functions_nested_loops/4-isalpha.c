@@ -4,12 +4,12 @@
 * return - 1 if true, 0 if false
 */int _isalpha(int c)
 {
-if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+if ((c >= 0 && c <= 47) || (c >= 58 && c <= 64) || c >= 123)
 {
-return (1);
+return (0);
 }
 else
 {
-return (0);
+return (1);
 }
 }
