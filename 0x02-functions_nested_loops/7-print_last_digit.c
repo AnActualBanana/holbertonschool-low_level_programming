@@ -6,6 +6,6 @@
 {
 int last_digit;
 last_digit = (r % 10);
-_putchar(last_digit);
+ printf("last_digit");
 return (last_digit);
 }
