@@ -7,7 +7,7 @@
 * prints 'Buzz' for multiples of 5,
 * and prints 'FizzBuzz' for multiples of 3 and 5
 * return - none
-*/void main(void)
+*/int main(void)
 {
 int n;
 for (n = 1; n <= 100; n++)
@@ -30,5 +30,5 @@ printf("FizzBuzz ");
 }
 }
 printf("\n");
-return;
+return (0);
 }
