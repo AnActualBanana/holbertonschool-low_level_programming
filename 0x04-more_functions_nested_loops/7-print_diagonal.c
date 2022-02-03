@@ -1,0 +1,27 @@
+#include "main.h"
+/*
+* print_diagonal - draws a diagonal line on the terminal
+* return - none
+*/void print_diagonal(int n)
+{
+int slashes;
+int spaces;
+if (n > 0)
+{
+for (slashes = 0; slashes < n; slashes++)
+{
+for (spaces = 0; spaces < slashes; spaces++)
+{
+_putchar(' ');
+}
+_putchar('\\');
+_putchar('\n');
+spaces = 0;
+}
+}
+else
+{
+_putchar('\n');
+}
+return;
+}
