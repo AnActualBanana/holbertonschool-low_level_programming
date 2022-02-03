@@ -22,7 +22,11 @@ printf("Fizz ");
 }
 else if ((n % 3 != 0) && (n % 5 == 0))
 {
-printf("Buzz ");
+printf("Buzz");
+if (n < 100)
+{
+printf(" ");
+}
 }
 else if ((n % 3 == 0) && (n % 5 == 0))
 {
