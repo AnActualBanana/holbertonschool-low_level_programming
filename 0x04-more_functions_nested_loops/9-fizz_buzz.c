@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /*
 * main - prints the numbers from 1-100, followed by a new line
 * except prints 'Fizz' for multiples of 3,
