@@ -9,7 +9,7 @@ int i;
 int n;
 for (i = 1; i <= 10; i++)
 {
-for (n = 1; n <= 14; n++)
+for (n = 0; n <= 14; n++)
 {
 if (n >= 10)
 {
