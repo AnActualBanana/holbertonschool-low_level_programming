@@ -1,7 +1,7 @@
 #include "main.h"
 /*
 * mul - multiplies two integers
-* return - 0
+* return - the result
 */int mul(int a, int b)
 {
 return ((a * b));
