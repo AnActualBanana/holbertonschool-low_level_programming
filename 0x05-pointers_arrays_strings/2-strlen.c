@@ -6,6 +6,9 @@
 {
 char c[] = "*s";
 int i;
-for (i = 0; c[i] != '\0'; i++);
+for (i = 0; c[i] != '\0'; ++i)
+{
+;
+}
 return (i);
 }
