@@ -5,15 +5,12 @@
 */char *_strchr(char *s, char c)
 {
 unsigned int i;
-char *n;
-n = s;
-for (i = 0; s[i] != '\0'; i++)
+for (i = 0; s[i] >= '\0'; i++)
 {
-n = &s[i];
 if (s[i] == c)
 {
-return (i);
+return (s + i);
 }
 }
-return ('\0');
+return (NULL);
 }
