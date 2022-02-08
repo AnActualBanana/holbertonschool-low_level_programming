@@ -12,7 +12,7 @@ for (i = 0; s[i] != '\0'; i++)
 n = &s[i];
 if (s[i] == c)
 {
-return (n);
+return (i);
 }
 }
 return ('\0');
