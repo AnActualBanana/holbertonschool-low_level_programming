@@ -8,22 +8,22 @@
 int i;
 int j;
 if (n % 2 == 0)
-   {
-     for (i = 1; i < n / 2; i++)
-       {
-	 j = a[i - 1];
-	 a[i - 1] = a[n - i];
-	 a[n - i] = j;
-       }
-   }
- else
-   {
-     for (i = 1; i < n / 2 + 1; i++)
-       {
-	 j = a[i - 1];
-	 a[i - 1] = a[n - i];
-	 a[n - i] = j;
-     }
-   }
+{
+for (i = 1; i < n / 2; i++)
+{
+j = a[i - 1];
+a[i - 1] = a[n - i];
+a[n - i] = j;
+}
+}
+else
+{
+for (i = 1; i < n / 2 + 1; i++)
+{
+j = a[i - 1];
+a[i - 1] = a[n - i];
+a[n - i] = j;
+}
+}
 return;
 }
