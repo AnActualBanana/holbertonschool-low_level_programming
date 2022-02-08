@@ -11,11 +11,11 @@ int i;
 int j;
 for (i = 0; dest[i] != '\0'; i++)
 ;
-for (j = 0; j < n; j++)
+for (j = 0; ((j < n) && (j < 10)); j++)
 {
 dest[i + j] = src[j];
 }
-if (j < n)
+if ((j < n) || (j = 10))
 {
 dest[i + j] = '\0';
 }
