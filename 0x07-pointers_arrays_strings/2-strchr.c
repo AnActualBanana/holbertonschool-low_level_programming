@@ -15,5 +15,5 @@ if (s[i] == c)
 return (n);
 }
 }
-return (0);
+return (NULL);
 }
