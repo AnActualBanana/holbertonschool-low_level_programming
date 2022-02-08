@@ -11,6 +11,10 @@ if (i < n)
 {
 dest[i] = src[i];
 }
+if (i < n)
+{
+dest[i] = '\0';
+}
 }
 return (dest);
 }
