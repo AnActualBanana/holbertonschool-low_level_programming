@@ -4,16 +4,28 @@
 * return - negative, positive, or 0
 */int _strcmp(char *s1, char *s2)
 {
-if (s1 < s2)
+int i;
+for (i = 0; s1[i] && s2[i]; i++)
 {
-return ((s1 - s2));
-}
-else if (s1 > s2)
+if (s1[i] == s2[i])
 {
-return ((s1 - s2));
+continue;
 }
 else
 {
-return ((0));
+break;
+}
+}
+if (s1[i] == s2[i])
+{
+return (0);
+}
+if ((s1[i]) < (s2[i]))
+{
+return (-1);
+}
+else
+{
+return (1);
 }
 }
