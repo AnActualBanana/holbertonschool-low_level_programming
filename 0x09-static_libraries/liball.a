@@ -1,0 +1,318 @@
+!<arch>
+0-isupper.c/    0           0     0     644     152       `
+#include "main.h"
+/*
+* _isupper - checks for uppercase character
+*/int _isupper(int c)
+{
+if (c >= 65 && c <= 90)
+{
+return (1);
+}
+else
+{
+return (0);
+}
+}
+0-memset.c/     0           0     0     644     229       `
+#include "main.h"
+/*
+* *_memset - fills memory with a constant byte
+* return - a pointer to the memory area s
+*/char *_memset(char *s, char b, unsigned int n)
+{
+unsigned int i;
+for (i = 0; i < n; i++)
+{
+s[i] = b;
+}
+return (s);
+}
+
+0-strcat.c/     0           0     0     644     306       `
+#include "holberton.h"
+/*
+* char *_strcat - concatenates two strings
+* return - a pointer to the resulting string dest
+*/char *_strcat(char *dest, char *src)
+{
+int i;
+int j;
+for (i = 0; dest[i] != '\0'; i++)
+;
+for (j = 0; src[j] != '\0'; j++)
+{
+dest[i + j] = src[j];
+}
+dest[i + j] = '\0';
+return (dest);
+}
+100-atoi.c/     0           0     0     644     60        `
+#include "main.h"
+/*
+*
+*/int _atoi(char *s)
+{
+return (0);
+}
+1-isdigit.c/    0           0     0     644     181       `
+#include "main.h"
+/*
+* _isdigit - checks for a digit (0-9)
+* return - 1 if digit, 0 otherwise
+*/int _isdigit(int c)
+{
+if (c >= 48 && c <= 57)
+{
+return (1);
+}
+else
+{
+return (0);
+}
+}
+
+1-memcpy.c/     0           0     0     644     218       `
+#include "main.h"
+/*
+* *_memcpy - copies memory area
+* return - a pointer to dest
+*/char *_memcpy(char *dest, char *src, unsigned int n)
+{
+unsigned int i;
+for (i = 0; i < n; i++)
+{
+dest[i] = src[i];
+}
+return (dest);
+}
+1-strncat.c/    0           0     0     644     470       `
+#include "holberton.h"
+/*
+* char *_strncat - concatenates two strings,
+* but it will use at most n bytes from src,
+* and src does not need to be null-terminated if,
+* it contains n or more bytes
+* return - a pointer to the resulting string dest
+*/char *_strncat(char *dest, char *src, int n)
+{
+int i;
+int j;
+for (i = 0; dest[i] != '\0'; i++)
+;
+for (j = 0; src[j] != '\0'; j++)
+{
+if (j < n)
+{
+dest[i + j] = src[j];
+}
+}
+if (j < n)
+{
+dest[i + j] = '\0';
+}
+return (dest);
+}
+2-strchr.c/     0           0     0     644     273       `
+#include "main.h"
+#include <stddef.h>
+/*
+* *_strchr - locates a character in a string
+* return - pointer if c is found, null otherwise
+*/char *_strchr(char *s, char c)
+{
+unsigned int i;
+for (i = 0; s[i] >= '\0'; i++)
+{
+if (s[i] == c)
+{
+return (s + i);
+}
+}
+return (NULL);
+}
+
+2-strlen.c/     0           0     0     644     183       `
+#include "main.h"
+/*
+* _strlen - returns the length of a string
+* return - the length of the string
+*/int _strlen(char *s)
+{
+int i;
+for (i = 0; s[i] != '\0'; ++i)
+{
+;
+}
+return (i);
+}
+
+2-strncpy.c/    0           0     0     644     272       `
+#include "holberton.h"
+/*
+* char *_strncpy - copies a string
+* return - a pointer to dest
+*/char *_strncpy(char *dest, char *src, int n)
+{
+int i;
+for (i = 0; src[i] != '\0'; i++)
+{
+if (i < n)
+{
+dest[i] = src[i];
+}
+}
+while (i < n)
+{
+dest[i] = '\0';
+i++;
+}
+return (dest);
+}
+3-islower.c/    0           0     0     644     188       `
+#include "main.h"
+/*
+* _islower - checks if character is lowercase
+* return - 1 if true, 0 if false
+*/int _islower(int c)
+{
+if (c >= 97 && c <= 122)
+{
+return (1);
+}
+else
+{
+return (0);
+}
+}
+3-puts.c/       0           0     0     644     191       `
+#include "main.h"
+/*
+* _puts - prints a string, followed by a new line,
+* to stdout
+* return - none
+*/void _puts(char *str)
+{
+while (*str)
+{
+_putchar(*str);
+str++;
+}
+putchar('\n');
+return;
+}
+
+3-strcmp.c/     0           0     0     644     356       `
+#include "holberton.h"
+/*
+* int _strcomp - compares two strings
+* return - negative, positive, or 0
+*/int _strcmp(char *s1, char *s2)
+{
+int i;
+for (i = 0; s1[i] && s2[i]; i++)
+{
+if (s1[i] == s2[i])
+{
+continue;
+}
+else
+{
+break;
+}
+}
+if (s1[i] == s2[i])
+{
+return (0);
+}
+if ((s1[i]) < (s2[i]))
+{
+return ((s1[i] - s2[i]));
+}
+else
+{
+return ((s1[i] - s2[i]));
+}
+}
+3-strspn.c/     0           0     0     644     369       `
+#include "main.h"
+/*
+* _strspn - gets the length of a prefix substring
+* return - the nubmer of bytes in s which consist,
+* only of bytes from accept
+*/unsigned int _strspn(char *s, char *accept)
+{
+unsigned int i;
+unsigned int j;
+unsigned int p;
+for (i = 0; s[i] != '\0'; i++)
+{
+for (p = 0; accept[p] != '\0'; p++)
+{
+if (s[i] == accept[p])
+{
+(j++);
+}
+}
+}
+return (j);
+}
+
+4-isalpha.c/    0           0     0     644     61        `
+#include "main.h"
+/*
+*
+*/int _isalpha(int c)
+{
+return (0);
+}
+
+4-strpbrk.c/    0           0     0     644     79        `
+#include "main.h"
+/*
+*
+*/char *_strpbrk(char *s, char *accept)
+{
+return (s);
+}
+
+5-strstr.c/     0           0     0     644     90        `
+#include "main.h"
+/*
+*
+*/char *_strstr(char *haystack, char *needle)
+{
+return (needle);
+}
+6-abs.c/        0           0     0     644     57        `
+#include "main.h"
+/*
+*
+*/int _abs(int n)
+{
+return (n);
+}
+
+9-strcpy.c/     0           0     0     644     80        `
+#include "main.h"
+/*
+*
+*/char *_strcpy(char *dest, char *src)
+{
+return (src);
+}
+_putchar.c/     0           0     0     644     247       `
+#include <unistd.h>
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
