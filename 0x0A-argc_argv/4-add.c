@@ -5,7 +5,9 @@
 */int main(int argc, char *argv[])
 {
 int count;
-int cur_num;
+int count2;
+int cur_num = 0;
+char *num_str = NULL;
 if (argc == 1)
 {
 printf("0\n");
@@ -13,15 +15,16 @@ return (0);
 }
 for (count = 1; count < argc; count++)
 {
-if (isdigit(*argv[count]) != 0)
-{
+num_str = argv[count];
+ for (count2 = 0; num_str[count2] != '\0'; count2++)
+   {
+     if (num_str[count2] < '0' || num_str[count2] > '9')
+       {
+	 printf("Error\n");
+	 return (1);
+       }
+   }
 cur_num = cur_num + atoi(argv[count]);
-}
-else
-{
-printf("Error\n");
-return (1);
-}
 }
 printf("%d\n", cur_num);
 return (0);
