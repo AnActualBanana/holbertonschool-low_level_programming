@@ -16,14 +16,14 @@ return (0);
 for (count = 1; count < argc; count++)
 {
 num_str = argv[count];
- for (count2 = 0; num_str[count2] != '\0'; count2++)
-   {
-     if (num_str[count2] < '0' || num_str[count2] > '9')
-       {
-	 printf("Error\n");
-	 return (1);
-       }
-   }
+for (count2 = 0; num_str[count2] != '\0'; count2++)
+{
+if (num_str[count2] < '0' || num_str[count2] > '9')
+{
+printf("Error\n");
+return (1);
+}
+}
 cur_num = cur_num + atoi(argv[count]);
 }
 printf("%d\n", cur_num);
