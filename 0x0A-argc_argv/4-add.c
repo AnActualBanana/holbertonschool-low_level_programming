@@ -6,15 +6,23 @@
 {
 int count;
 int cur_num;
- if (argc < 2)
-   {
-     printf("0\n");
-     return (-1);
-   }
- for (count = 1; count < argc; count++)
-   {
-     cur_num += atoi(argv[count]);
-   }
- printf("%d\n", cur_num);
- return (0);
+if (argc == 1)
+{
+printf("0\n");
+return (0);
+}
+for (count = 1; count < argc; count++)
+{
+if (isdigit(*argv[count]) != 0)
+{
+cur_num = cur_num + atoi(argv[count]);
+}
+else
+{
+printf("Error\n");
+return (1);
+}
+}
+printf("%d\n", cur_num);
+return (0);
 }
