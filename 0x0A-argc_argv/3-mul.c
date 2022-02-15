@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /*
 * main - multiplies two numbers
-* return - 0 if two arguments given, -1 if else
+* return - 0 if two arguments given, 1 if else
 */int main(int argc, char *argv[])
 {
 if (argc == 3)
@@ -20,6 +20,6 @@ return (0);
 else
 {
 printf("Error\n");
-return (-1);
+return (1);
 }
 }
