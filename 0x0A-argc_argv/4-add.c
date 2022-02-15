@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 /*
-* function does stuff
-* return - 0
+* main - adds positive numbers
+* return - 0 if valid, 1 if error
 */int main(int argc, char *argv[])
 {
 int count;
