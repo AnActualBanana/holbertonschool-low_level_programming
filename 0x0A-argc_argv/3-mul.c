@@ -8,12 +8,12 @@
 {
 if (argc == 3)
 {
-int number_1;
-int number_2;
+int num_1;
+int num_2;
 int product;
-number_1 = (*argv[1] - '0');
-number_2 = (*argv[2] - '0');
-product = (number_1 *number_2);
+num_1 = atoi(argv[1]);
+num_2 = atoi(argv[2]);
+product = (num_1 *num_2);
 printf("%d\n", product);
 return (0);
 }
