@@ -7,5 +7,5 @@
 #include <stddef.h>
 #include <ctype.h>
 /* prototypes */
-
+int _putchar (char c);
 #endif /* MAIN_H */
