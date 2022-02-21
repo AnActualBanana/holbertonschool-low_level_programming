@@ -9,5 +9,5 @@ if (a == NULL)
 {
 exit(98);
 }
-return(a);
+return (a);
 }
