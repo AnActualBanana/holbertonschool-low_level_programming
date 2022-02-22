@@ -8,18 +8,29 @@ if (d == NULL)
 {
 return;
 }
-if (d.name == NULL)
+if (d->name == NULL)
 {
-d.name = "(nil)";
+printf("Name: (nil)\n");
 }
-if (d.age == NULL)
+else
 {
-d.age = "(nil)";
+printf("Name: %s\n", d->name);
 }
-if (d.owner == NULL)
+if (d->age <= 0)
 {
-d.owner = "(nil)";
+printf("Age: (nil)\n");
 }
-printf("Name: %s\nAge: %d\nOwner: %s\n", d.name, d.age, d.owner);
+else
+{
+printf("Age: %f\n", d->age);
+}
+if (d->owner == NULL)
+{
+printf("Owner: (nil)\n");
+}
+else
+{
+printf("Owner: %s\n", d->owner);
+}
 return;
 }
