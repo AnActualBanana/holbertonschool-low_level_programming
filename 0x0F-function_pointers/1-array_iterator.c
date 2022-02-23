@@ -4,8 +4,9 @@
 * return - none
 */void array_iterator(int *array, size_t size, void (*action)(int))
 {
+unsigned long int count;
 if (!array || !size || !action)
 return;
-for (int count = 0; count < size; count++)
+for (count = 0; count < size; count++)
 action(array[count]);
 }
