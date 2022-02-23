@@ -6,6 +6,8 @@
 {
 int count;
 int check;
+if (!array || !size || !cmp)
+return (-1);
 if (size <= 0)
 return (-1);
 for (count = 0; count < size; count++)
