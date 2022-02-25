@@ -6,7 +6,7 @@
 {
 unsigned int count, num;
 va_list args;
-if (args == 0 || n == 0)
+if (args == 0)
 {
 return;
 }
