@@ -18,7 +18,6 @@ string = va_arg(args, char *);
 if (string == NULL)
 {
 printf("(nil)");
-return;
 }
 else
 {
