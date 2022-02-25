@@ -6,7 +6,7 @@
 {
 unsigned int count, num;
 va_list args;
-if (args == 0 || n == 0 || separator == NULL)
+if (args == 0 || n == 0 ||)
 {
 return;
 }
@@ -16,7 +16,7 @@ for (count = 0; count < n; count++)
 {
 num = va_arg(args, int);
 printf("%d", num);
-if (count != (n - 1))
+if (count != (n - 1) && separator != NULL)
 {
 printf("%s", separator);
 }
