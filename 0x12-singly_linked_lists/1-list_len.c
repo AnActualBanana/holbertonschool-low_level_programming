@@ -7,15 +7,9 @@
 unsigned int count = 0;
 while (h->next != NULL)
 {
-if (h->str != NULL && h->len != 0)
-{
 count++;
-}
 h = h->next;
 }
-if (h->str != NULL && h->len != 0)
-{
 count++;
-}
 return (count);
 }
