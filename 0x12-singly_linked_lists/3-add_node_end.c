@@ -8,20 +8,26 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new = malloc(1 * sizeof(list_t));
-	list_t *iterate = malloc(1 * sizeof(list_t));
-	if (new == NULL || iterate == NULL)
+	list_t *iterate = *head;
+
+	if (new == NULL)
 	{
+		free(new);
+		free(iterate);
 		return (NULL);
+	}
+	new->str = strdup(str);
+	new->len = strlen(str);
+	new->next = NULL;
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
 	}
 	while (iterate->next != NULL)
 	{
 		iterate = iterate->next;
-		}
-	iterate->str = strdup(str);
-	iterate->len = strlen(str);
+	}
 	iterate->next = new;
-	new->str = strdup(str);
-	new->len = strlen(str);
-	/*printf("%s, %s\n", new->str, iterate->str);*/
-	 return (new);
+	return (new);
 }
