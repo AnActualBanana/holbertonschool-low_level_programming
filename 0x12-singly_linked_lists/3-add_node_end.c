@@ -9,8 +9,6 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new = malloc(1 * sizeof(list_t));
 	list_t *iterate = malloc(1 * sizeof(list_t));
-
-	iterate->next = *head;
 	if (new == NULL || iterate == NULL)
 	{
 		return (NULL);
@@ -19,9 +17,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		iterate = iterate->next;
 		}
+	iterate->str = strdup(str);
+	iterate->len = strlen(str);
 	iterate->next = new;
 	new->str = strdup(str);
 	new->len = strlen(str);
-	new->next = NULL;
-	return (new);
+	/*printf("%s, %s\n", new->str, iterate->str);*/
+	 return (new);
 }
