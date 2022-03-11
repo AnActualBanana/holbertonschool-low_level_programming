@@ -15,7 +15,6 @@ for (width = 0; width < size; width++)
 _putchar('#');
 }
 _putchar('\n');
-width = 0;
 }
 }
 else
