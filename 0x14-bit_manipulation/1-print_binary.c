@@ -13,6 +13,8 @@ void print_binary(unsigned long int n)
 	unsigned int num_remaining = n;
 	unsigned int sum = 0;
 
+	if (!n)
+		return;
 	if (n > 1)
 	{
 	while (num_remaining != 0)
