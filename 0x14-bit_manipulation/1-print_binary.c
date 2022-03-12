@@ -6,35 +6,9 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int pow_mul = 1;
-	unsigned int count = 0;
-	unsigned int adder = 1;
-	unsigned int digits = 0;
-	unsigned int num_remaining = n;
-	unsigned int sum = 0;
-
-	if (!n)
-		return;
 	if (n > 1)
 	{
-	while (num_remaining != 0)
-	{
-		digits = 0;
-		for (pow_mul = 1; (pow_mul * 2) <= num_remaining;)
-	{
-		pow_mul *= 2;
-		digits++;
+		print_binary(n >>1);
 	}
-	for (count = 1; count < digits; count++)
-	{
-		adder *= 10;
-	}
-	sum += adder;
-	adder = 1;
-	num_remaining -= pow_mul;
-	}
-	printf("%d%d", sum, num_remaining);
-	}
-	else
-		printf("%lu", n);
+	_putchar((n & 1) + '0');
 }
