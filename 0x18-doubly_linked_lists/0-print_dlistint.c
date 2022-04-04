@@ -6,10 +6,10 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	unsigned int count;
 	size_t nodes = 0;
-
-	for (count = 0; h->next != NULL; count++)
+	if (h == NULL)
+		return (0);
+	while (h->next != NULL)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
