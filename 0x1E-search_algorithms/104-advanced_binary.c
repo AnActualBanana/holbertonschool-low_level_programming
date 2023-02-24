@@ -1,5 +1,7 @@
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
  * advanced_binary - searches for a value in a sorted array of integers
  * @array: pointer to the first element of the array to search in
