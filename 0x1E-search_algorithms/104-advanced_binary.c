@@ -9,11 +9,13 @@
  */
 int advanced_binary(int *array, size_t size, int value)
 {
+    size_t left = 0;
+    size_t right = size - 1;
+
     if (array == NULL || size == 0)
         return (-1);
 
-    size_t left = 0;
-    size_t right = size - 1;
+
 
     while (left <= right)
     {
