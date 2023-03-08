@@ -3,39 +3,46 @@
 #include <stdio.h>
 
 /**
- * advanced_binary - searches for a value in a sorted array of integers
+ * advanced_binary - searches for a value in a sorted array of integers.
+ *
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in array
- * @value: value to search for
- *
- * Return: index where value is located, or -1 if not found or array is NULL
+ * @value: the value to search for
+ * Return: If value is not present in array or if array is NULL, return -1
+ * Otherwise, return the first index of value
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-    size_t i, mid;
-    int res;
-
-    if (!array || size == 0)
+    if (array == NULL || size == 0)
         return (-1);
 
-    printf("Searching in array: ");
-    for (i = 0; i < size; i++)
-        printf("%d%s", array[i], i == size - 1 ? "\n" : ", ");
+    size_t left = 0;
+    size_t right = size - 1;
 
-    mid = (size - 1) / 2;
-    if (array[mid] == value)
+    while (left <= right)
     {
-        if (size == 1 || array[mid - 1] < value)
-            return (mid);
+        size_t mid = (left + right) / 2;
+
+        if (array[mid] == value)
+        {
+            if (mid == 0 || array[mid - 1] != value)
+                return (mid);
+            right = mid - 1;
+        }
+        else if (array[mid] < value)
+            left = mid + 1;
+        else
+            right = mid - 1;
+        printf("Searching in array: ");
+        for (size_t i = left; i <= right; i++)
+        {
+            printf("%d", array[i]);
+            if (i < right)
+                printf(", ");
+            else
+                printf("\n");
+        }
     }
-    else if (array[mid] < value)
-    {
-        res = advanced_binary(array + mid + 1, size - mid - 1, value);
-        if (res != -1)
-            return (mid + res + 1);
-    }
-    else
-        return (advanced_binary(array, mid + 1, value));
 
     return (-1);
 }
